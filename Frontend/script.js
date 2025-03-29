@@ -10,3 +10,8 @@ async function runCode() {
   const result = await response.json();
   document.getElementById("output").textContent = result.output;
 }
+
+document.querySelector(".icon-container").addEventListener("click", () => {
+  document.querySelector(".icon-dark").classList.toggle("hidden");
+  document.querySelector(".icon-light").classList.toggle("hidden");
+});

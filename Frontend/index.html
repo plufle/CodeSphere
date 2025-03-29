@@ -7,13 +7,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Online Code Editor</h1>
-    <textarea
-      id="codeEditor"
-      placeholder="Write Python code here..."
-    ></textarea>
+    <header class="header">
+      <div>
+        <p class="heading-text">Code Editor</p>
+        <h1 class="heading-primary">Code-Shere</h1>
+      </div>
+      <div class="icon-container">
+        <ion-icon name="moon-outline" class="icon icon-dark"></ion-icon>
+        <ion-icon
+          name="sunny-outline"
+          class="icon icon-light hidden"
+        ></ion-icon>
+      </div>
+    </header>
+    <div class="container">
+      <div class="editor">
+        <textarea
+          id="codeEditor"
+          placeholder="Write Python code here..."
+        ></textarea>
+      </div>
+      <div class="output">
+        <pre id="output"></pre>
+      </div>
+    </div>
     <button onclick="runCode()">Run</button>
-    <pre id="output"></pre>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script src="script.js"></script>
   </body>
