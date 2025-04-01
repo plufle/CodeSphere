@@ -27,16 +27,27 @@
         ></ion-icon>
       </div>
     </header>
+    <div>
+      <label for="language-select">Select Language:</label>
+      <select id="language-select">
+        <option value="python" selected>Python</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+      </select>
+    </div>
+
     <div class="container">
       <div class="editor">
-        <textarea id="codeEditor" placeholder="Write code here..."></textarea>
+        <div id="codeEditor" style="height: 100%; width: 100%"></div>
       </div>
       <div class="output">
         <h2 class="output-heading">Output</h2>
         <pre id="output" class="output-text"></pre>
       </div>
     </div>
-    <button onclick="runCode()">Run</button>
+    <button onclick="runCode()" type="submit">Run</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.0/min/vs/loader.min.js"></script>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

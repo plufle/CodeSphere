@@ -100,17 +100,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 100%;
 }
-
-textarea {
-  width: 100%;
+#codeEditor {
   height: 100%;
-  font-size: 1.6rem;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-
-  padding: 1rem;
-  resize: none;
-  outline: none;
+  width: 100%;
   border-radius: 6px;
 }
 
