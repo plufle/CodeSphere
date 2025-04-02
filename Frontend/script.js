@@ -11,6 +11,7 @@ require(["vs/editor/editor.main"], function () {
     theme: "vs-dark",
     automaticLayout: true,
     minimap: { enabled: false },
+    fontSize: 14,
   });
 
   const languageSelect = document.getElementById("language-select");
@@ -73,3 +74,14 @@ async function runCode(event) {
     document.getElementById("output").textContent = `Error: ${err.message}`;
   }
 }
+
+const fontSizeInput = document.querySelector(".font-size-input");
+fontSizeInput.addEventListener("change", function (e) {
+  let value = fontSizeInput.value;
+  if (value <= 9) {
+    alert("font Size below 10 is not visible");
+    fontSizeInput.value = 10;
+    return;
+  }
+  editor.updateOptions({ fontSize: value });
+});

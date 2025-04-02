@@ -27,14 +27,28 @@
         ></ion-icon>
       </div>
     </header>
-    <div>
-      <label for="language-select">Select Language:</label>
-      <select id="language-select">
-        <option value="python" selected>Python</option>
-        <option value="c">C</option>
-        <option value="cpp">C++</option>
-        <option value="java">Java</option>
-      </select>
+    <div class="options-bar">
+      <div>
+        <label for="language-select" class="option-bar-text"
+          >Select Language:
+        </label>
+        <select id="language-select" class="language-select">
+          <option value="python" selected>Python</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="java">Java</option>
+        </select>
+      </div>
+      <div>
+        <label for="font-size-input" class="option-bar-text">Font-size:</label>
+        <input
+          type="number"
+          id="font-size-input"
+          class="font-size-input"
+          value="14"
+        />
+      </div>
+      <button onclick="runCode()" type="submit" class="button">Run</button>
     </div>
 
     <div class="container">
@@ -46,7 +60,7 @@
         <pre id="output" class="output-text"></pre>
       </div>
     </div>
-    <button onclick="runCode()" type="submit">Run</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.0/min/vs/loader.min.js"></script>
     <script
       type="module"

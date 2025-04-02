@@ -82,6 +82,60 @@ body {
 .hidden {
   display: none;
 }
+/* options bar */
+
+.options-bar {
+  padding: 1.6rem 3.2rem;
+  background-color: #252526;
+  margin: 2.4rem 3.2rem 0 3.2rem;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.option-bar-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 1rem;
+}
+
+.language-select {
+  background-color: #3a3a3a;
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+}
+
+.font-size-input {
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  width: 10rem;
+  text-align: center;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #575757;
+}
 
 /* EDITOR & OUTPUT CONTAINER */
 .container {
@@ -131,20 +185,3 @@ body {
 }
 
 /* RUN BUTTON */
-button {
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #575757;
-}
