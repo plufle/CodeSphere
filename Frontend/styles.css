@@ -23,20 +23,36 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  transition: all 1s;
+}
+
+.body.dark {
   background-color: #1e1e1e;
   color: #f0f0f0;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 /* HEADER */
 .header {
   padding: 2rem 4.8rem;
-  background-color: #252526;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header.dark {
+  background-color: #252526;
+}
+
+.header.light {
+  background-color: #f0f0f0;
+  color: #444;
+}
+
+.header.light .heading-text {
+  color: #666;
 }
 
 .heading-text {
@@ -87,7 +103,6 @@ body {
 
 .options-bar {
   padding: 1.6rem 3.2rem;
-  background-color: #252526;
   margin: 2.4rem 3.2rem 0 3.2rem;
   border-radius: 8px;
 
@@ -95,6 +110,14 @@ body {
   align-items: center;
   gap: 3rem;
   justify-content: space-evenly;
+}
+
+.options-bar.dark {
+  background-color: #252526;
+}
+
+.options-bar.light {
+  background-color: #f0f0f0;
 }
 
 .option-bar-text {
@@ -123,6 +146,20 @@ body {
   text-align: center;
 }
 
+.language-select.dark,
+.font-size-input.dark {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.language-select.light,
+.font-size-input.light {
+  background-color: #e0e0e0;
+  color: #222;
+  border: 1px solid #bbb;
+}
+
 .button {
   padding: 1rem 2rem;
   font-size: 1.6rem;
@@ -135,10 +172,23 @@ body {
   transition: background 0.3s;
 }
 
-.button:hover {
+.button.dark {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.button.light {
+  background-color: #ddd;
+  color: #222;
+}
+
+.button.dark:hover {
   background-color: #575757;
 }
 
+.button.light:hover {
+  background-color: #bbb;
+}
 /* EDITOR & OUTPUT CONTAINER */
 .container {
   display: grid;
@@ -162,6 +212,14 @@ body {
   border-radius: 6px;
 }
 
+.editor.dark {
+  background-color: #252526;
+}
+
+.editor.light {
+  background-color: #f9f9f9;
+}
+
 /* OUTPUT */
 .output {
   background-color: #252526;
@@ -171,6 +229,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 100%;
   overflow-y: auto;
+}
+.output.dark {
+  background-color: #252526;
+  color: #f0f0f0;
+}
+
+.output.light {
+  background-color: #ffffff;
+  color: #222;
 }
 
 .output-heading {
@@ -185,5 +252,3 @@ body {
 .error {
   color: red;
 }
-
-/* RUN BUTTON */
