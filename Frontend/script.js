@@ -11,7 +11,7 @@ require(["vs/editor/editor.main"], function () {
     theme: "vs-dark",
     automaticLayout: true,
     minimap: { enabled: false },
-    fontSize: 14,
+    fontSize: 16,
   });
 
   const languageSelect = document.getElementById("language-select");
@@ -85,3 +85,33 @@ fontSizeInput.addEventListener("change", function (e) {
   }
   editor.updateOptions({ fontSize: value });
 });
+
+function download() {
+  if (!editor) {
+    alert("Editor not initialized!");
+    return;
+  }
+
+  const fileExtensions = {
+    python: "py",
+    java: "java",
+    c: "c",
+    cpp: "cpp",
+  };
+
+  const code = editor.getValue();
+  const language = editor.getModel().getLanguageId();
+
+  const blob = new Blob([code], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  console.log(language);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `code.${fileExtensions[language]}`;
+
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  URL.revokeObjectURL(url);
+}
